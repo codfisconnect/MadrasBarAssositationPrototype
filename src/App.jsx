@@ -19,7 +19,7 @@ import {
   PlayCircle,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import logo from "./assets/MadrasBarAssociationlogo.jpg"
+import logo from "./assets/madrasbarassociationlogo.jpg"
 
 const menu = [
   { label: "Home", href: "#home" },
