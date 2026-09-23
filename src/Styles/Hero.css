@@ -1,0 +1,193 @@
+/* Hero.css - Black Titanium Theme */
+/* Replace your existing Hero.css with this starter premium theme. */
+
+:root {
+  --bg: #b39191;
+  --surface: #e7b6b6;
+  --card: #1f1f1f;
+  --gold: #d4af37;
+  --gold2: #f2d16b;
+  --text: #fff;
+  --muted: #c8c8c8;
+}
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: var(--text);
+  background: linear-gradient(135deg, #050505, #101010 55%, #181818);
+}
+
+.slideshow-container,
+.slide-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.slide-bg {
+  position: absolute;
+  inset: 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+
+  transform: scale(1.08);
+
+  transition:
+    opacity 1.2s ease,
+    transform 7s ease;
+
+  filter: brightness(0.85) contrast(1.08) saturate(1.15);
+}
+
+.slide-active {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+.slideshow-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(to right,
+
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.2)),
+    linear-gradient(to top,
+
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.1));
+}
+
+.blueprint-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 55px 55px;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.hero-grid-wrapper {
+  position: relative;
+  z-index: 20;
+  width: min(1450px, 92%);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 90px;
+  padding-top: 140px;
+  padding-bottom: 90px;
+}
+
+.association-badge {
+  display: inline-flex;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  background: rgba(212, 175, 55, 0.08);
+  color: var(--gold2);
+  font-weight: 700;
+}
+
+.action-buttons-group {
+  display: flex;
+  gap: 18px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.bearer-info-card {
+  border-radius: 30px;
+  background: rgba(15, 15, 15, 0.68);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 35px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+
+.profile-image-mask {
+  width: 100px;
+  height: 100px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--gold), #6b5215);
+}
+
+.profile-img-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.role-eyebrow-text {
+  color: var(--gold2);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.member-display-name {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.member-tenure-text {
+  color: #b8b8b8;
+}
+
+.carousel-dot {
+  background: #444;
+}
+
+.dot-active {
+  background: var(--gold);
+  width: 22px;
+}
+
+.nav-arrow-btn {
+  background: #222;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-radius: 50%;
+}
+
+.nav-arrow-btn:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+@media (max-width: 992px) {
+  .hero-grid-wrapper {
+    grid-template-columns: 1fr;
+    padding-top: 110px;
+  }
+
+  .main-association-title {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 768px) {
+  .explore-btn {
+    width: 100%;
+  }
+  .hero-section{
+    min-height: fit-content;
+  }
+  .bearer-info-card{
+    max-width: 50%;
+    float: right;
+  }
+}
