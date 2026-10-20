@@ -1,0 +1,283 @@
+/* --- Modern Design Token System --- */
+:root {
+    --clr-primary: #f5f5f0;
+    /* Off-white for headings on black titanium */
+    --clr-accent: #d4af37;
+    /* Royal gold */
+    --clr-bg-canvas: #0a0a0a;
+    /* Black titanium canvas */
+    --clr-bg-surface: #131313;
+    /* Dark titanium card surface */
+    --clr-text-main: #f5f5f0;
+    /* High contrast off-white */
+    --clr-text-muted: #a8a8a0;
+    /* Secondary warm grey text */
+    --clr-border: rgba(212, 175, 55, 0.2);
+    /* Subtle gold divider borders */
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.35);
+    --shadow-viewport: 0 20px 25px -5px rgba(0, 0, 0, 0.55), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Global Container --- */
+.pdf-viewer-container {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--clr-bg-canvas);
+    padding: 1.5rem 2.5rem;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+    overflow: hidden;
+    /* Bypasses outer page scrolling for a native app feel */
+}
+
+/* --- Premium Layout Header --- */
+.pdf-viewer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto 1.5rem auto;
+    gap: 1.5rem;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* --- Action Controls --- */
+.back-home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--clr-bg-surface);
+    border: 1px solid var(--clr-border);
+    color: var(--clr-text-main);
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+    white-space: nowrap;
+}
+
+.back-home-btn:hover {
+    background: linear-gradient(135deg, #f5d576, #d4af37, #b8860b);
+    color: #0a0a0a;
+    border-color: var(--clr-accent);
+    transform: translateX(-2px);
+}
+
+/* --- Typography Segment --- */
+.title-block h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+    letter-spacing: -0.03em;
+    margin: 0 0 0.25rem 0;
+}
+
+.title-block p {
+    font-size: 0.925rem;
+    color: var(--clr-text-muted);
+    margin: 0;
+}
+
+/* --- Utilities Action Row --- */
+.action-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--clr-bg-surface);
+    border: 1px solid var(--clr-border);
+    color: var(--clr-text-main);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.625rem 1.25rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+    white-space: nowrap;
+}
+
+.action-link-btn:hover {
+    border-color: var(--clr-accent);
+    background-color: #1a1a1a;
+}
+
+/* --- Elevated Frame Wrapper --- */
+.pdf-frame-wrapper {
+    max-width: 1400px;
+    width: 100%;
+    flex: 1;
+    /* Automatically grows to occupy 100% of the remaining vertical space */
+    margin: 0 auto;
+    background-color: var(--clr-bg-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-viewport);
+    overflow: hidden;
+    position: relative;
+
+    /* Robust fallback height declarations */
+    min-height: 82vh;
+    height: 100%;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.pdf-object {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* --- Layout Fallback Card Structure --- */
+.pdf-fallback-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: var(--clr-bg-canvas);
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+.fallback-card {
+    background: var(--clr-bg-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    padding: 3rem 2rem;
+    text-align: center;
+    max-width: 440px;
+    box-shadow: var(--shadow-viewport);
+}
+
+.fallback-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.fallback-card h3 {
+    font-size: 1.25rem;
+    color: var(--clr-primary);
+    margin: 0 0 0.5rem 0;
+}
+
+.fallback-card p {
+    font-size: 0.925rem;
+    color: var(--clr-text-muted);
+    line-height: 1.5;
+    margin: 0 0 2rem 0;
+}
+
+.pdf-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #f5d576, #d4af37, #b8860b);
+    color: #0a0a0a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+}
+
+.pdf-download-btn:hover {
+    background: linear-gradient(135deg, #ffe38a, #f0c14b, #d4af37);
+    transform: translateY(-1px);
+    box-shadow: 0 12px 28px rgba(212, 175, 55, 0.4);
+}
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE MEDIA BREAKPOINTS
+   ========================================================================== */
+
+/* --- Medium Devices (Tablets, up to 1024px wide screens) --- */
+@media (max-width: 1024px) {
+    .pdf-viewer-container {
+        padding: 1rem;
+        height: auto;
+        /* Allows natural layout expansion on touch devices */
+        overflow: visible;
+    }
+
+    .pdf-viewer-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+
+    .header-left {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 1.25rem;
+    }
+
+    .header-actions {
+        width: 100%;
+    }
+
+    .header-actions:hover {
+        background: linear-gradient(135deg, #f5d576, #d4af37, #b8860b);
+        color: #0a0a0a;
+        border-color: var(--clr-accent);
+        transform: translateX(-2px);
+
+    }
+
+    .action-link-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .pdf-frame-wrapper {
+        min-height: 80vh;
+        /* Enforces massive height viewport on tablets */
+    }
+}
+
+/* --- Small Mobile Devices (Smartphones, up to 768px wide screens) --- */
+@media (max-width: 768px) {
+    .pdf-viewer-container {
+        padding: 0.75rem;
+    }
+
+    .title-block h2 {
+        font-size: 1.45rem;
+    }
+
+    .title-block p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .pdf-frame-wrapper {
+        min-height: 84vh;
+        /* Maximizes the viewport area explicitly for mobile reading screens */
+        border-radius: var(--radius-md);
+    }
+}

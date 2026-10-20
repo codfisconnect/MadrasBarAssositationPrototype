@@ -1,0 +1,1844 @@
+/* ==========================================================
+   PROFILE COMPLETION
+   BLACK TITANIUM + ROYAL GOLD THEME
+   PART 4.1
+==========================================================*/
+
+/*==========================
+ROOT VARIABLES
+==========================*/
+
+:root{
+
+    --primary:#0d0d0d;
+    --secondary:#161616;
+    --card:#1d1d1d;
+    --card-light:#242424;
+
+    --gold:#D4AF37;
+    --gold-light:#F3D87A;
+    --gold-dark:#B88A18;
+
+    --white:#ffffff;
+
+    --text:#F5F5F5;
+    --text-light:#b7b7b7;
+
+    --border:rgba(255,255,255,.08);
+
+    --shadow:
+    0 25px 60px rgba(0,0,0,.45);
+
+}
+
+/*==========================
+BODY
+==========================*/
+
+body{
+
+    background:#090909;
+
+    color:var(--text);
+
+    font-family:
+    Inter,
+    "Segoe UI",
+    sans-serif;
+
+}
+
+/*==========================
+MAIN PAGE
+==========================*/
+
+.profile-completion-page{
+
+    min-height:100vh;
+
+    padding:140px 20px 80px;
+
+    background:
+
+    radial-gradient(
+    circle at top right,
+    rgba(212,175,55,.12),
+    transparent 35%
+    ),
+
+    radial-gradient(
+    circle at bottom left,
+    rgba(212,175,55,.06),
+    transparent 35%
+    ),
+
+    linear-gradient(
+    180deg,
+    #0a0a0a,
+    #111111,
+    #0b0b0b
+    );
+
+}
+
+/*==========================
+CONTAINER
+==========================*/
+
+.profile-completion-container{
+
+    max-width:1450px;
+
+    margin:auto;
+
+}
+
+/*==========================
+HEADER
+==========================*/
+
+.completion-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    margin-bottom:45px;
+
+}
+
+.completion-header span{
+
+    display:inline-block;
+
+    color:var(--gold);
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    font-weight:800;
+
+}
+
+.completion-header h1{
+
+    margin-top:10px;
+
+    font-size:48px;
+
+    font-weight:900;
+
+    color:white;
+
+}
+
+.completion-header p{
+
+    margin-top:15px;
+
+    max-width:700px;
+
+    color:var(--text-light);
+
+    line-height:1.9;
+
+    font-size:16px;
+
+}
+
+/*==========================
+SAVE BUTTON
+==========================*/
+
+.save-profile-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:16px 34px;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:800;
+
+    color:#111;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #C89B2C,
+    #D4AF37,
+    #F4D778
+    );
+
+    box-shadow:
+
+    0 15px 40px rgba(212,175,55,.35);
+
+    transition:.35s;
+
+}
+
+.save-profile-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 20px 55px rgba(212,175,55,.45);
+
+}
+
+/*==========================
+PROGRESS CARD
+==========================*/
+
+.profile-progress-card{
+
+    background:
+
+    linear-gradient(
+    135deg,
+    rgba(32,32,32,.95),
+    rgba(22,22,22,.95)
+    );
+
+    border:1px solid var(--border);
+
+    border-radius:28px;
+
+    padding:30px;
+
+    margin-bottom:40px;
+
+    box-shadow:var(--shadow);
+
+    backdrop-filter:blur(16px);
+
+}
+
+/*==========================
+PROGRESS HEADER
+==========================*/
+
+.progress-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.progress-header h3{
+
+    font-size:22px;
+
+    color:white;
+
+    font-weight:800;
+
+}
+
+.progress-header span{
+
+    color:var(--gold);
+
+    font-weight:800;
+
+    font-size:15px;
+
+}
+
+/*==========================
+PROGRESS BAR
+==========================*/
+
+.progress-bar{
+
+    width:100%;
+
+    height:14px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    background:
+
+    rgba(255,255,255,.06);
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    width:0;
+
+    border-radius:999px;
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #B88A18,
+    #D4AF37,
+    #F6DF8B
+    );
+
+    transition:1s ease;
+
+    box-shadow:
+
+    0 0 20px rgba(212,175,55,.35);
+
+}
+
+/*==========================
+MAIN GRID
+==========================*/
+
+.profile-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    360px
+    1fr;
+
+    gap:35px;
+
+    align-items:flex-start;
+
+}
+/*==========================================================
+PROFILE LEFT CARD
+==========================================================*/
+
+.profile-left-card{
+
+    position:sticky;
+
+    top:120px;
+
+    background:
+    linear-gradient(
+    145deg,
+    rgba(28,28,28,.98),
+    rgba(18,18,18,.98)
+    );
+
+    border:1px solid rgba(212,175,55,.15);
+
+    border-radius:32px;
+
+    padding:35px;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.45);
+
+    backdrop-filter:blur(18px);
+
+    overflow:hidden;
+
+}
+
+/* Gold glow */
+
+.profile-left-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    right:-140px;
+
+    top:-140px;
+
+    background:
+    radial-gradient(
+    circle,
+    rgba(212,175,55,.20),
+    transparent 70%
+    );
+
+    pointer-events:none;
+
+}
+
+/*==========================================================
+PHOTO AREA
+==========================================================*/
+
+.photo-wrapper{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+/*==========================================================
+PROFILE IMAGE
+==========================================================*/
+
+.profile-preview{
+
+    width:210px;
+
+    height:210px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:6px solid rgba(212,175,55,.25);
+
+    box-shadow:
+
+    0 18px 40px rgba(0,0,0,.45),
+
+    0 0 40px rgba(212,175,55,.18);
+
+    transition:.45s;
+
+}
+
+.profile-preview:hover{
+
+    transform:scale(1.03);
+
+    border-color:var(--gold);
+
+}
+
+/*==========================================================
+EMPTY PHOTO
+==========================================================*/
+
+.empty-photo{
+
+    width:210px;
+
+    height:210px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--gold);
+
+    background:
+    linear-gradient(
+    145deg,
+    #242424,
+    #111111
+    );
+
+    border:3px dashed rgba(212,175,55,.35);
+
+    transition:.35s;
+
+}
+
+.empty-photo:hover{
+
+    border-color:var(--gold);
+
+    transform:scale(1.03);
+
+}
+
+/*==========================================================
+UPLOAD BUTTON
+==========================================================*/
+
+.upload-photo-btn{
+
+    margin-top:22px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 24px;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    color:#111;
+
+    background:
+    linear-gradient(
+    135deg,
+    #C89B2C,
+    #D4AF37,
+    #F2D16B
+    );
+
+    transition:.35s;
+
+    box-shadow:
+    0 10px 25px rgba(212,175,55,.30);
+
+}
+
+.upload-photo-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 18px 40px rgba(212,175,55,.45);
+
+}
+
+/*==========================================================
+MEMBER INFO
+==========================================================*/
+
+.member-basic-info{
+
+    margin-top:35px;
+
+    text-align:center;
+
+}
+
+.member-basic-info h2{
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:900;
+
+    margin-bottom:8px;
+
+}
+
+.member-basic-info p{
+
+    color:var(--gold);
+
+    font-size:16px;
+
+    font-weight:700;
+
+    margin-bottom:14px;
+
+}
+
+.member-basic-info span{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(212,175,55,.10);
+
+    border:1px solid rgba(212,175,55,.20);
+
+    color:var(--gold-light);
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+/*==========================================================
+PROFILE TIPS
+==========================================================*/
+
+.completion-tips{
+
+    margin-top:35px;
+
+    background:
+    linear-gradient(
+    145deg,
+    rgba(255,255,255,.03),
+    rgba(255,255,255,.01)
+    );
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:22px;
+
+    padding:24px;
+
+}
+
+.completion-tips h4{
+
+    color:var(--gold);
+
+    font-size:18px;
+
+    font-weight:800;
+
+    margin-bottom:18px;
+
+}
+
+.completion-tips ul{
+
+    padding:0;
+
+    margin:0;
+
+    list-style:none;
+
+}
+
+.completion-tips li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 0;
+
+    color:#d4d4d4;
+
+    font-size:15px;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.completion-tips li:last-child{
+
+    border-bottom:none;
+
+}
+
+/*==========================================================
+LEFT CARD HOVER
+==========================================================*/
+
+.profile-left-card:hover{
+
+    border-color:rgba(212,175,55,.28);
+
+    transform:translateY(-4px);
+
+    transition:.35s;
+
+}
+/*==========================================================
+RIGHT FORM CARD
+==========================================================*/
+
+.profile-form-card{
+
+    background:
+    linear-gradient(
+    145deg,
+    rgba(28,28,28,.98),
+    rgba(18,18,18,.98)
+    );
+
+    border:1px solid rgba(212,175,55,.15);
+
+    border-radius:32px;
+
+    padding:45px;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.45);
+
+    backdrop-filter:blur(18px);
+
+}
+
+/*==========================================================
+SECTION TITLE
+==========================================================*/
+
+.form-section{
+
+    margin-bottom:45px;
+
+}
+
+.form-section:last-child{
+
+    margin-bottom:0;
+
+}
+
+.form-section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+    color:var(--gold);
+
+    font-size:24px;
+
+    font-weight:800;
+
+}
+
+.form-section-title svg{
+
+    color:var(--gold);
+
+}
+
+/*==========================================================
+FORM GRID
+==========================================================*/
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+@media(max-width:900px){
+
+.form-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/*==========================================================
+INPUT GROUP
+==========================================================*/
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.input-group.full-width{
+
+    grid-column:1/-1;
+
+}
+
+/*==========================================================
+LABEL
+==========================================================*/
+
+.input-group label{
+
+    color:var(--gold-light);
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:.3px;
+
+}
+
+/*==========================================================
+INPUT
+==========================================================*/
+
+.input-group input,
+
+.input-group select,
+
+.input-group textarea{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:#111;
+
+    color:white;
+
+    font-size:15px;
+
+    transition:.35s;
+
+    outline:none;
+
+}
+
+/*==========================================================
+PLACEHOLDER
+==========================================================*/
+
+.input-group input::placeholder,
+
+.input-group textarea::placeholder{
+
+    color:#777;
+
+}
+
+/*==========================================================
+TEXTAREA
+==========================================================*/
+
+.input-group textarea{
+
+    resize:vertical;
+
+    min-height:130px;
+
+    line-height:1.7;
+
+}
+
+/*==========================================================
+FOCUS EFFECT
+==========================================================*/
+
+.input-group input:focus,
+
+.input-group select:focus,
+
+.input-group textarea:focus{
+
+    border-color:var(--gold);
+
+    box-shadow:
+
+    0 0 0 4px rgba(212,175,55,.12);
+
+}
+
+/*==========================================================
+SELECT
+==========================================================*/
+
+.input-group select{
+
+    cursor:pointer;
+
+}
+
+/*==========================================================
+READ ONLY
+==========================================================*/
+
+.input-group input:read-only{
+
+    background:#181818;
+
+    color:#bdbdbd;
+
+    cursor:not-allowed;
+
+}
+
+/*==========================================================
+FORM DIVIDER
+==========================================================*/
+
+.form-divider{
+
+    margin:45px 0;
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+/*==========================================================
+ACTION BUTTONS
+==========================================================*/
+
+.form-actions{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:18px;
+
+    margin-top:40px;
+
+    flex-wrap:wrap;
+
+}
+
+/*==========================================================
+CANCEL BUTTON
+==========================================================*/
+
+.cancel-btn{
+
+    padding:15px 34px;
+
+    border-radius:999px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    background:transparent;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.cancel-btn:hover{
+
+    border-color:var(--gold);
+
+    background:rgba(255,255,255,.04);
+
+}
+
+/*==========================================================
+SAVE BUTTON
+==========================================================*/
+
+.save-btn{
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:800;
+
+    color:#111;
+
+    background:
+    linear-gradient(
+    135deg,
+    #C89B2C,
+    #D4AF37,
+    #F2D16B
+    );
+
+    box-shadow:
+    0 12px 30px rgba(212,175,55,.30);
+
+    transition:.35s;
+
+}
+
+.save-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 18px 40px rgba(212,175,55,.45);
+
+}
+
+/*==========================================================
+SMALL TEXT
+==========================================================*/
+
+.helper-text{
+
+    margin-top:8px;
+
+    color:#8c8c8c;
+
+    font-size:13px;
+
+}
+
+/*==========================================================
+SUCCESS MESSAGE
+==========================================================*/
+
+.success-message{
+
+    margin-top:30px;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    background:rgba(30,180,90,.12);
+
+    border:1px solid rgba(30,180,90,.35);
+
+    color:#6EE7A7;
+
+    font-weight:700;
+
+}
+/*==========================================================
+PROFILE PHOTO UPLOAD
+==========================================================*/
+
+.photo-upload{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:30px;
+
+    border:2px dashed rgba(212,175,55,.30);
+
+    border-radius:24px;
+
+    background:
+    linear-gradient(
+    145deg,
+    rgba(255,255,255,.02),
+    rgba(255,255,255,.01)
+    );
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.photo-upload:hover{
+
+    border-color:var(--gold);
+
+    background:
+    rgba(212,175,55,.05);
+
+}
+
+.photo-upload svg{
+
+    color:var(--gold);
+
+    margin-bottom:15px;
+
+}
+
+.photo-upload h4{
+
+    color:white;
+
+    margin-bottom:6px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.photo-upload p{
+
+    color:#8f8f8f;
+
+    font-size:13px;
+
+    text-align:center;
+
+}
+
+.photo-upload input{
+
+    display:none;
+
+}
+
+/*==========================================================
+UPLOAD PREVIEW
+==========================================================*/
+
+.upload-preview{
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    margin-bottom:20px;
+
+    border:4px solid rgba(212,175,55,.30);
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.35);
+
+}
+
+.upload-preview img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/*==========================================================
+CUSTOM CHECKBOX
+==========================================================*/
+
+.checkbox-group{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:12px;
+
+}
+
+.checkbox-group input{
+
+    width:20px;
+
+    height:20px;
+
+    accent-color:#D4AF37;
+
+    cursor:pointer;
+
+}
+
+.checkbox-group label{
+
+    color:#d8d8d8;
+
+    font-size:14px;
+
+    cursor:pointer;
+
+}
+
+/*==========================================================
+RADIO BUTTONS
+==========================================================*/
+
+.radio-group{
+
+    display:flex;
+
+    gap:25px;
+
+    margin-top:10px;
+
+}
+
+.radio-group label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#d8d8d8;
+
+    cursor:pointer;
+
+}
+
+.radio-group input{
+
+    accent-color:#D4AF37;
+
+}
+
+/*==========================================================
+PROFILE COMPLETION BAR
+==========================================================*/
+
+.profile-progress{
+
+    margin-bottom:40px;
+
+}
+
+.profile-progress-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:12px;
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+.progress-track{
+
+    width:100%;
+
+    height:12px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    background:#252525;
+
+}
+
+.progress-fill{
+
+    width:70%;
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #C89B2C,
+    #D4AF37,
+    #F2D16B
+    );
+
+    box-shadow:
+    0 0 20px rgba(212,175,55,.45);
+
+    animation:progressGlow 3s infinite alternate;
+
+}
+
+@keyframes progressGlow{
+
+    from{
+
+        box-shadow:
+        0 0 10px rgba(212,175,55,.25);
+
+    }
+
+    to{
+
+        box-shadow:
+        0 0 28px rgba(212,175,55,.60);
+
+    }
+
+}
+
+/*==========================================================
+CARD HOVER
+==========================================================*/
+
+.profile-summary-card,
+.profile-form-card{
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+
+}
+
+.profile-summary-card:hover,
+.profile-form-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 30px 70px rgba(0,0,0,.45);
+
+}
+
+/*==========================================================
+SCROLLBAR
+==========================================================*/
+
+.profile-form-card::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.profile-form-card::-webkit-scrollbar-thumb{
+
+    background:#D4AF37;
+
+    border-radius:999px;
+
+}
+
+.profile-form-card::-webkit-scrollbar-track{
+
+    background:#171717;
+
+}
+
+/*==========================================================
+FADE ANIMATION
+==========================================================*/
+
+.fade-up{
+
+    animation:fadeUp .6s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+RESPONSIVE
+==========================================================*/
+
+@media(max-width:992px){
+
+.profile-layout{
+
+grid-template-columns:1fr;
+
+}
+
+.profile-summary-card{
+
+position:relative;
+
+top:0;
+
+}
+
+.profile-form-card{
+
+padding:30px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.profile-page{
+
+padding:120px 18px 60px;
+
+}
+
+.profile-form-card{
+
+padding:24px;
+
+}
+
+.form-actions{
+
+flex-direction:column;
+
+}
+
+.save-btn,
+.cancel-btn{
+
+width:100%;
+
+}
+
+.upload-preview{
+
+width:140px;
+
+height:140px;
+
+}
+
+.profile-name{
+
+font-size:28px;
+
+}
+
+.profile-role{
+
+font-size:15px;
+
+}
+
+.form-section-title{
+
+font-size:20px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.profile-page{
+
+padding:100px 14px 40px;
+
+}
+
+.profile-summary-card{
+
+padding:25px;
+
+}
+
+.profile-form-card{
+
+padding:20px;
+
+border-radius:24px;
+
+}
+
+.upload-preview{
+
+width:120px;
+
+height:120px;
+
+}
+
+.photo-upload{
+
+padding:20px;
+
+}
+
+.profile-name{
+
+font-size:24px;
+
+}
+
+}
+
+/*==========================================================
+DASHBOARD PROFILE COMPLETION CARD (compact notification)
+==========================================================*/
+
+.dpc-card{
+
+    position:relative;
+
+    background:
+    linear-gradient(
+    145deg,
+    rgba(28,28,28,.98),
+    rgba(18,18,18,.98)
+    );
+
+    border:1px solid rgba(212,175,55,.15);
+
+    border-radius:22px;
+
+    padding:26px 28px;
+
+    margin-bottom:28px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.4);
+
+    overflow:hidden;
+
+}
+
+.dpc-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:linear-gradient(180deg,var(--gold),var(--gold-light));
+
+}
+
+.dpc-card.is-complete::before{
+
+    background:linear-gradient(180deg,#4caf50,#81c784);
+
+}
+
+.dpc-header{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    justify-content:space-between;
+
+    gap:16px;
+
+    margin-bottom:18px;
+
+}
+
+.dpc-header-left{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+}
+
+.dpc-icon{
+
+    width:40px;
+
+    height:40px;
+
+    min-width:40px;
+
+    border-radius:12px;
+
+    background:rgba(212,175,55,.12);
+
+    border:1px solid rgba(212,175,55,.3);
+
+    color:var(--gold);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.is-complete .dpc-icon{
+
+    background:rgba(76,175,80,.12);
+
+    border-color:rgba(76,175,80,.35);
+
+    color:#81c784;
+
+}
+
+.dpc-header-left h3{
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:800;
+
+    margin:0 0 4px 0;
+
+}
+
+.dpc-header-left p{
+
+    color:var(--text-light);
+
+    font-size:13px;
+
+    margin:0;
+
+}
+
+.dpc-ring-wrap{
+
+    position:relative;
+
+    width:54px;
+
+    height:54px;
+
+    min-width:54px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.dpc-ring{
+
+    width:54px;
+
+    height:54px;
+
+    transform:rotate(-90deg);
+
+}
+
+.dpc-ring-bg{
+
+    fill:none;
+
+    stroke:rgba(255,255,255,.08);
+
+    stroke-width:3;
+
+}
+
+.dpc-ring-fill{
+
+    fill:none;
+
+    stroke:var(--gold);
+
+    stroke-width:3;
+
+    stroke-linecap:round;
+
+    transition:stroke-dasharray .6s ease;
+
+}
+
+.is-complete .dpc-ring-fill{
+
+    stroke:#81c784;
+
+}
+
+.dpc-ring-wrap span{
+
+    position:absolute;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    color:white;
+
+}
+
+.dpc-track{
+
+    width:100%;
+
+    height:7px;
+
+    background:rgba(255,255,255,.06);
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    margin-bottom:18px;
+
+}
+
+.dpc-fill{
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:linear-gradient(90deg,var(--gold-dark),var(--gold),var(--gold-light));
+
+    box-shadow:0 0 14px rgba(212,175,55,.4);
+
+    transition:width .6s ease;
+
+}
+
+.dpc-missing-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+}
+
+.dpc-missing-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:13px;
+
+    color:#cfcfc7;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+}
+
+.dpc-missing-item svg{
+
+    color:var(--gold);
+
+    min-width:14px;
+
+}
+
+.dpc-cta-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    background:linear-gradient(135deg,#C89B2C,var(--gold),#F2D16B);
+
+    color:#111;
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 25px rgba(212,175,55,.3);
+
+    transition:.35s;
+
+}
+
+.dpc-cta-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 40px rgba(212,175,55,.45);
+
+}
+
+@media(max-width:640px){
+
+.dpc-header{
+
+flex-direction:column;
+
+}
+
+.dpc-ring-wrap{
+
+align-self:flex-end;
+
+margin-top:-42px;
+
+}
+
+}
+
+/*==========================================================
+END OF FILE
+==========================================================*/

@@ -1,0 +1,393 @@
+/* ==========================================================
+   OFFICE BEARERS
+   BLACK TITANIUM + ROYAL GOLD
+   Premium Executive Theme
+========================================================== */
+
+:root {
+  --bg: #07090D;
+  --bg2: #10131A;
+  --card: #181B22;
+  --card-hover: #1E222B;
+  --gold: #D4AF37;
+  --gold-light: #F4D676;
+  --gold-dark: #A67C00;
+  --text: #FFFFFF;
+  --text-light: #C8CDD6;
+  --border: rgba(212, 175, 55, .15);
+  --shadow: 0 20px 45px rgba(0, 0, 0, .45);
+}
+
+/*================================================*/
+
+.office-bearers-section {
+  position: relative;
+  padding: 120px 0;
+  overflow: hidden;
+  background: radial-gradient(circle at top left, rgba(212, 175, 55, .08), transparent 35%), radial-gradient(circle at bottom right, rgba(212, 175, 55, .05), transparent 35%), linear-gradient(180deg, #07090D, #0D1118, #07090D);
+
+}
+
+/*================================================*/
+
+.office-bearers-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, .02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: .4;
+}
+
+/*================================================*/
+
+.office-bearers-container {
+  position: relative;
+  z-index: 2;
+  width: min(1400px, 92%);
+  margin: auto;
+}
+
+/*================================================*/
+
+.bearers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 70px;
+}
+
+.member-card {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 28px;
+  padding: 40px 30px;
+  flex: 1 1 220px;
+  min-width: 220px;
+  height: 400px;
+  background: linear-gradient(180deg, #25261b, #13161D);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: .45s ease;
+}
+
+
+/* Metallic top shine */
+
+.member-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .08), transparent);
+  transform: skewX(-25deg);
+  transition: 1s;
+}
+
+.member-card:hover::before {
+  left: 150%;
+}
+
+/* Gold Glow */
+
+.member-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  box-shadow: inset 0 0 0 1px rgba(212, 175, 55, .15);
+  pointer-events: none;
+}
+
+/*================================================*/
+
+.member-card:hover {
+  transform: translateY(-12px);
+  background: linear-gradient(180deg, #1F232C, #171A20);
+  border-color: rgba(212, 175, 55, .45);
+  box-shadow: 0 35px 65px rgba(0, 0, 0, .55), 0 0 35px rgba(212, 175, 55, .10);
+}
+
+/*================================================*/
+
+.image-frame {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  padding: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8C6A18, #D4AF37, #F4D676, #D4AF37);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, .35);
+
+}
+
+/*================================================*/
+
+.member-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #12151B;
+  transition: .45s;
+}
+
+.member-card:hover .member-avatar {
+  transform: scale(1.05);
+}
+
+/*================================================*/
+
+.member-role {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 8px 22px;
+  border-radius: 50px;
+  background: rgba(212, 175, 55, .10);
+  color: var(--gold-light);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/*================================================*/
+
+.member-name {
+  margin-top: 22px;
+  font-size: 30px;
+  color: white;
+  font-weight: 800;
+  transition: .35s;
+}
+
+.member-card:hover .member-name {
+  color: var(--gold-light);
+}
+
+/*================================================*/
+
+.member-term {
+  margin-top: 12px;
+  color: #B9C2D0;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+/*================================================*/
+
+.member-card:hover .member-term {
+  color: white;
+}
+
+/*================================================*/
+.committeeMembers-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.CommiteeMember-card {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 28px;
+  padding: 40px 30px;
+  width: 200px;
+  height: 300px;
+  background: linear-gradient(180deg, #25261b, #13161D);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: .45s ease;
+}
+
+
+/* Metallic top shine */
+
+.CommiteeMember-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 40%;
+  height: 80%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .08), transparent);
+  transform: skewX(-25deg);
+  transition: 1s;
+}
+
+.CommiteeMember-card:hover::before {
+  left: 130%;
+}
+
+/* Gold Glow */
+
+.CommiteeMember-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  box-shadow: inset 0 0 0 1px rgba(212, 175, 55, .15);
+  pointer-events: none;
+}
+
+/*================================================*/
+
+.CommiteeMember-card:hover {
+  transform: translateY(-12px);
+  background: linear-gradient(180deg, #1F232C, #171A20);
+  border-color: rgba(212, 175, 55, .45);
+  box-shadow: 0 35px 65px rgba(0, 0, 0, .55), 0 0 35px rgba(212, 175, 55, .10);
+}
+
+/*================================================*/
+
+.committeeMember-image-frame {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  padding: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8C6A18, #D4AF37, #F4D676, #D4AF37);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, .35);
+}
+
+/*================================================*/
+
+.committeeMember-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #12151B;
+  transition: .45s;
+}
+
+.CommiteeMember-card:hover .committeeMember-avatar {
+  transform: scale(1.05);
+}
+
+/*================================================*/
+
+.committeeMember-name {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 11px;
+  border-radius: 50px;
+  background: rgba(212, 175, 55, .10);
+  color: var(--gold-light);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/*================================================*/
+
+.committeeMember-role {
+  margin-top: 5px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: white;
+  font-weight: 800;
+  transition: .35s;
+}
+
+.member-card:hover .member-name {
+  color: var(--gold-light);
+}
+
+/*================================================*/
+
+.committeeMember-term {
+  margin-top: 5px;
+  color: #B9C2D0;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+/*================================================*/
+
+.member-card:hover .member-term {
+  color: white;
+}
+
+
+@media(max-width:992px) {
+  .member-card {
+    flex: 1 1 45%;
+  }
+}
+
+/*================================================*/
+
+@media(max-width:768px) {
+  .office-bearers-section {
+    padding: 90px 0;
+  }
+
+  .bearers-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .member-card {
+    width: 100%;
+    max-width: 380px;
+    flex: none;
+    min-width: 0;
+    height: auto;
+    padding: 35px 25px 30px;
+  }
+
+  .image-frame {
+    width: 160px;
+    height: 160px;
+  }
+
+  .member-name {
+    font-size: 26px;
+  }
+
+  .committeeMembers-grid {
+    gap: 18px;
+  }
+
+  .CommiteeMember-card {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    padding: 30px 22px 26px;
+  }
+}
+
+/*================================================*/
+
+@media(max-width:480px) {
+  .image-frame {
+    width: 145px;
+    height: 145px;
+  }
+
+  .member-role {
+    font-size: 12px;
+  }
+
+  .member-name {
+    font-size: 24px;
+  }
+
+  .member-term {
+    font-size: 14px;
+  }
+
+  .member-card {
+    max-width: 100%;
+    padding: 30px 20px 26px;
+  }
+}

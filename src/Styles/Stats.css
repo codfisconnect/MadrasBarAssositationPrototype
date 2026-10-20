@@ -1,0 +1,64 @@
+/* --- Stats Section --- */
+.stats-section {
+  position: relative;
+  z-index: 10;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -2.5rem; /* equivalent to -mt-10 */
+  max-width: 72rem;    /* equivalent to max-w-6xl */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+/* --- Card --- */
+.stats-card {
+  border-radius: 1.5rem; /* equivalent to rounded-3xl */
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  background: linear-gradient(160deg, #131313, #0a0a0a);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.1);
+}
+
+/* --- Value & Label --- */
+.stats-value {
+  margin: 0;
+  font-size: 1.875rem; /* equivalent to text-3xl */
+  font-weight: 900;    /* equivalent to font-black */
+  background: linear-gradient(135deg, #f5d576, #d4af37);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stats-label {
+  margin-top: 0.5rem;
+  font-size: 0.875rem; /* equivalent to text-sm */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em; /* equivalent to tracking-wide */
+  color: #a8a8a0;
+}
+
+/* --- Responsive Grid --- */
+@media (min-width: 640px) {
+  .stats-section {
+    grid-template-columns: repeat(2, 1fr); /* equivalent to sm:grid-cols-2 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats-section {
+    grid-template-columns: repeat(4, 1fr); /* equivalent to lg:grid-cols-4 */
+    padding: 0 2rem; /* equivalent to lg:px-8 */
+  }
+}
