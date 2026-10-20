@@ -1,4 +1,4 @@
-import logo from "../assets/MadrasBarAssociationlogo.jpg";
+import logo from "../assets/madrasbarassociationlogo.jpg";
 import "../Styles/Logo.css";
 
 function Logo() {
