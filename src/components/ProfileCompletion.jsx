@@ -1,7 +1,6 @@
 import { useState } from "react";
 import {
   User,
-  Upload,
   Camera,
   Mail,
   Phone,

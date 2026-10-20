@@ -6,7 +6,7 @@ import DashboardStats from "./DashboardStats";
 import MembershipOverview from "./MembershipOverview";
 import UpcomingEvents from "./UpcomingEvents";
 import RecentNotices from "./RecentNotices";
-// import CertificatesSection from "./Certifiacate/CertificatesSection";
+import CertificatesSection from "../Certifiacate/CertificatesSection";
 import QuickActions from "./QuickActions";
 import MembershipValidity from "./MembershipValidity";
 import ProfileCompletionCard from "./ProfileCompletionCard";

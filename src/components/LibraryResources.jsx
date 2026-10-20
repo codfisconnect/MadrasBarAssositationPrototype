@@ -1,4 +1,4 @@
-import { BookOpen, Download, FileText, Search } from "lucide-react";
+import { Download, FileText, Search } from "lucide-react";
 import "../Styles/MembersDash.css";
 
 const LIBRARY_DEMO = [

@@ -1,4 +1,3 @@
-import React from "react";
 import { Gavel, Users, Landmark, Scale } from "lucide-react";
 import SectionTitle from "../SectionTitle";
 import "./About.css"; 
