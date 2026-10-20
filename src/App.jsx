@@ -1,3 +1,4 @@
+```jsx
 import { useState } from "react";
 
 import Header from "./components/Header";
@@ -26,150 +27,85 @@ function App() {
   const [showInternshipForm, setShowInternshipForm] = useState(false);
   const [activePage, setActivePage] = useState("home");
 
-  if (activePage === "members") {
-    return (
-      <>
-        <Header setActivePage={setActivePage} />
-        <Members />
-        <InternshipButton onClick={() => setShowInternshipForm(true)} />
-        {showInternshipForm && (
-          <InternshipForm onClose={() => setShowInternshipForm(false)} />
-        )}
-        <Footer />
-      </>
-    );
-  }
-  if (activePage === "member-login") {
-    return (
-      <>
-        <Header setActivePage={setActivePage} />
+  const showInternshipButton = [
+    "home",
+    "members",
+    "Gallery",
+    "contact",
+    "office-bearers",
+  ].includes(activePage);
 
-        <MembersLogin setActivePage={setActivePage} />
+  const renderPage = () => {
+    switch (activePage) {
+      case "members":
+        return <Members />;
 
-        <Footer />
-      </>
-    );
-  }
-  if (activePage === "create-account") {
-    return (
-      <>
-        <Header setActivePage={setActivePage} />
+      case "member-login":
+        return <MembersLogin setActivePage={setActivePage} />;
 
-        <CreateAccount setActivePage={setActivePage} />
+      case "create-account":
+        return <CreateAccount setActivePage={setActivePage} />;
 
-        <Footer />
-      </>
-    );
-  }
-  if (activePage === "otp-verification") {
-    return (
-      <>
-        <Header setActivePage={setActivePage} />
+      case "otp-verification":
+        return <OTPVerification setActivePage={setActivePage} />;
 
-        <OTPVerification setActivePage={setActivePage} />
+      case "profile-completion":
+        return <ProfileCompletion setActivePage={setActivePage} />;
 
-        <Footer />
-      </>
-    );
-  }
-  if (activePage === "profile-completion") {
-    return (
-      <>
-        <Header setActivePage={setActivePage} />
+      case "forgot-password":
+        return <ForgotPassword setActivePage={setActivePage} />;
 
-        <ProfileCompletion setActivePage={setActivePage} />
+      case "reset-password":
+        return <ResetPassword setActivePage={setActivePage} />;
 
-        <Footer />
-      </>
-    );
-  }
-  if (activePage === "forgot-password") {
-    return (
-      <>
-        <Header setActivePage={setActivePage} />
+      case "Gallery":
+        return <Gallery />;
 
-        <ForgotPassword setActivePage={setActivePage} />
+      case "contact":
+        return <Contact />;
 
-        <Footer />
-      </>
-    );
-  }
-  if (activePage === "reset-password") {
-    return (
-      <>
-        <Header setActivePage={setActivePage} />
+      case "office-bearers":
+        return <OfficeBearers />;
 
-        <ResetPassword setActivePage={setActivePage} />
+      case "constitution":
+        return <ConstitutionOfIndia />;
 
-        <Footer />
-      </>
-    );
-  }
-  if (activePage === "Gallery") {
-    return (
-      <>
-        <Header setActivePage={setActivePage} />
-        <Gallery />
-        <InternshipButton onClick={() => setShowInternshipForm(true)} />
-        {showInternshipForm && (
-          <InternshipForm onClose={() => setShowInternshipForm(false)} />
-        )}
-        <Footer />
-      </>
-    );
-  }
-  if (activePage === "contact") {
-    return (
-      <>
-        <Header setActivePage={setActivePage} />
-        <Contact />
-        <InternshipButton onClick={() => setShowInternshipForm(true)} />
-        {showInternshipForm && (
-          <InternshipForm onClose={() => setShowInternshipForm(false)} />
-        )}
-        <Footer />
-      </>
-    );
-  }
-  if (activePage === "office-bearers") {
-    return (
-      <>
-        <Header setActivePage={setActivePage} />
-        <OfficeBearers />
-        <InternshipButton onClick={() => setShowInternshipForm(true)} />
-        {showInternshipForm && (
-          <InternshipForm onClose={() => setShowInternshipForm(false)} />
-        )}
-        <Footer />
-      </>
-    );
-  }
-  if (activePage === "constitution") {
-    return (
-      <>
-        <Header setActivePage={setActivePage} />
-        <ConstitutionOfIndia />
-        <Footer />
-      </>
-    );
-  }
+      default:
+        return (
+          <>
+            <Hero setActivePage={setActivePage} />
+            <Stats />
+            <About />
+            <Academy />
+            <UsefulLinks />
+            <Associations />
+          </>
+        );
+    }
+  };
 
   return (
     <>
       <Header setActivePage={setActivePage} />
-      <Hero setActivePage={setActivePage} />
-      <Stats />
-      <About />
-      <Academy />
-      <UsefulLinks />
-      <Associations />
-      <Footer />
-      <InternshipButton onClick={() => setShowInternshipForm(true)} />
-      {showInternshipForm && (
-        <InternshipForm onClose={() => setShowInternshipForm(false)} />
+
+      {renderPage()}
+
+      {showInternshipButton && (
+        <InternshipButton
+          onClick={() => setShowInternshipForm(true)}
+        />
       )}
+
+      {showInternshipForm && (
+        <InternshipForm
+          onClose={() => setShowInternshipForm(false)}
+        />
+      )}
+
+      <Footer />
     </>
   );
 }
 
 export default App;
+```
